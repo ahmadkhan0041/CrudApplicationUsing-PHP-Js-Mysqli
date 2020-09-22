@@ -1,0 +1,23 @@
+/* font-style  */
+
+.customStyle {
+    padding: 0px 20px 0px 15px;
+    cursor: pointer;
+}
+
+
+/* trash style */
+
+.trashStyle {
+    cursor: pointer;
+}
+
+.customWidth {
+    width: 88%;
+    text-align: center;
+    margin: auto;
+}
+
+.customHead {
+    padding: 20px;
+}

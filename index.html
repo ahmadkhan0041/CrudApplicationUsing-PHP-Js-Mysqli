@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Task</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="RegistrationHeading">
+            <h3 style="text-align: center;">Registration Form</h3>
+        </div>
+        <form name="myForm" id="myForm" action="insert.php" method="POST" enctype="multipart/form-data" onsubmit="return validationForm()">
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+
+                    <!-- <input type="file" name="fileToUpload" id="fileToUpload"> -->
+
+                    <label for="user">Full Name</label>
+                    <!-- <i class="fa fa-user icon"></i> -->
+
+                    <input type="text" class="form-control" name="username" id="user" onfocusout="usernameValid()" placeholder="Enter Your Full Name" autocomplete="off" required>
+                    <span id="userspan" class="text-danger font-weight-bold"></span>
+                </div>
+                <!-- first name input finish -->
+                <div class="form-group col-md-6">
+                    <label for="emailInput">Email. *</label>
+                    <!-- <i class="fa fa-user icon"></i> -->
+                    <input type="email" class="form-control" name="email" onfocusout="emailValid()" id="emailInput" placeholder="Please Enter Your Email Address" autocomplete="off" required>
+                    <span id="emailspan" class="text-danger font-weight-bold"></span>
+                </div>
+                <!-- email input finish -->
+                <div class="form-group col-md-6">
+                    <label for="mobNumber">Mobile No. *</label>
+                    <input type="number" class="form-control" name="phone_Number" required onfocusout="mobilValid()" maxlength="11" id="mobNumber" placeholder="" autocomplete="off" required>
+                    <span id="mobileSpan" class="text-danger font-weight-bold"></span>
+                </div>
+                <!-- Number input finish -->
+                <div class="form-group col-md-6">
+                    <label for="cnicInput">CNIC. *</label>
+                    <input type="number" class="form-control" name="cnic_Number" onfocusout="CnicValid()" maxlength="14" id="cnicInput" placeholder="" autocomplete="off" required>
+                    <span id="cnicSpam" class="text-danger font-weight-bold"></span>
+                </div>
+                <!-- CNIC input finish -->
+
+                <div class="form-group col-md-12">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" maxlength="42" name="user_address" class="form-control" onfocusout="AddressValid()" id="inputAddress" placeholder="Address" autocomplete="off" required>
+                    <span id="addressSpam" class="text-danger font-weight-bold"></span>
+                </div>
+                <!-- Address Input Finish -->
+
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" name="first_Password" onfocusout="passwordOneValid()" maxlength="20" minlength="6" id="pass_1" placeholder="Password" autocomplete="off" required>
+                    <span id="firstPasswordSpam" class="text-danger font-weight-bold"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="confirmPassword">Re-Type Your Password</label>
+                    <input type="password" class="form-control" name="last_Password" maxlength="20" minlength="6" onfocusout="passwordOneValidConfirm()" id="pass_2" placeholder="Password" autocomplete="off" required>
+                    <span id="secondPasswordSpam" class="text-danger font-weight-bold"></span>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="fileSpam">File Upload</label>
+                <input type="file" class="form-control" name="pic" required>
+                <span id="fileSpam" class="text-danger font-weight-bold"></span>
+            </div>
+            <!-- choose file finished -->
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" onclick="checkedTerms()" name="terms" id="gridCheck" required>
+                    <label class="form-check-label" for="gridCheck">
+            <span id="checkBoxspan" class="text-danger font-weight-bold"></span>
+            I Agree to Excise Department <a href="#">Term of Service</a>
+
+          </label>
+
+                </div>
+
+            </div>
+
+            <div class="btnBG">
+                <input type="submit" class="btn btn-success" name="register " autocomplete="off" value="REGISTER">
+            </div>
+
+    </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
